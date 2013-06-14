@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#e0e0e0"
+        android:padding="5dp"
         tools:context=".MainActivity" >
 
         <!-- TODO: 左側から順に、下記の View を配置していき、そのまとまりを画面上部に揃える -->
@@ -21,8 +22,8 @@
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:background="#f0f0f0" />
         <ImageView
             android:id="@+id/imageView1"
@@ -48,15 +49,36 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/imageView2"
             android:layout_marginLeft="30dp"
+            android:layout_marginBottom="5dp"
             android:layout_toRightOf="@+id/imageView2"
             android:text="Wataru Yokoyama" />
+        
+        <!-- スパナ -->		
+        <ImageView
+            android:id="@+id/imageViewManage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView2"
+            android:src="@android:drawable/ic_menu_manage"
+            android:layout_alignParentRight="true" />
+        
+        <!-- 線 -->
+        <ImageView
+            android:id="@+id/imageViewUL"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignRight="@+id/imageViewManage"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:background="#393939" />
+        
         <!-- 3. 1. の右側の下半分に、電話ボタン、メール送信ボタン、共有ボタンの 3 つを均等割付 -->
-
         <LinearLayout
+            android:id="@+id/ButtonLinear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_alignBottom="@+id/textView1"
             android:layout_below="@+id/textView2"
             android:layout_toRightOf="@+id/textView1"
@@ -80,6 +102,9 @@
                 android:layout_weight="1"
                 android:src="@android:drawable/ic_menu_share" />
         </LinearLayout>
+
+
+
     </RelativeLayout>
     <!-- 4. 2. と 3. の間に分割線 -->
     <!-- 条件: 3. 以外では LinearLayout を使ってはならない -->
