@@ -1,9 +1,86 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#e0e0e0"
+    android:padding="10dp"
     tools:context=".MainActivity" >
 
+       <ImageView
+           android:id="@+id/imageView2"
+           android:layout_width="match_parent"
+           android:layout_height="140dp"
+           android:layout_centerHorizontal="true"
+           android:background="#f0f0f0" />
 
-</LinearLayout>
+       <TextView
+           android:id="@+id/textView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+		   android:layout_below="@+id/textView1"
+		   android:layout_alignRight="@+id/textView1"
+           android:text="res/ic_launcher.png"
+           android:textColor="#c0c0c0"
+           android:textSize="15sp" />
+
+       <ImageView
+           android:id="@+id/imageView1"
+           android:layout_width="45dp"
+           android:layout_height="120dp"
+           android:layout_alignRight="@+id/imageView2"
+           android:layout_alignTop="@+id/imageView2"
+           android:layout_margin="10dp"          
+           android:background="#ffffff" />
+
+       <ImageView
+           android:id="@+id/imageView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignRight="@+id/imageView1"
+           android:layout_below="@+id/textView2"
+           android:src="@drawable/ic_launcher" />
+
+       <TextView
+           android:id="@+id/textView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/imageView2"
+           android:layout_alignTop="@+id/imageView1"
+           android:layout_marginLeft="21dp"
+           android:text="ドロイド君の画像ファイル"
+           android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@+id/imageView2"
+            android:layout_below="@+id/imageView2"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView4"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#c0c0c0"
+            android:text="xhdpi"
+            android:textSize="10dp" />
+        
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/imageView4"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:textColor="#a0a0a0"
+            android:text="12.516 bytes"
+            android:textSize="10dp" />
+        
+</RelativeLayout>
